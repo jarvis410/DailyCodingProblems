@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * justify text
- * 
+ *
  * @author makad
  *
  */
@@ -27,7 +27,7 @@ public class Problem28 {
 
 
 		for (int i = 0; i < wordList.length; i++) {
-			String word = wordList[i];
+            String word = wordList[i];
 //			System.out.println("::" + word);
 
 			if (startWord) {
@@ -43,6 +43,7 @@ public class Problem28 {
 					usedSpace += word.length() + 1;
 				} else {
 					spaces = lineLength - usedSpace;
+                    System.out.println(usedSpace);
 					usedSpace = 0;
 					--i;
 
@@ -50,13 +51,18 @@ public class Problem28 {
 				}
 			}
 
-			if (startWord || i + 1 == wordList.length) {
+			if (startWord || ((i + 1) == wordList.length)) {
 				wordCount.add(noOfWordsInLine);
 				noOfWordsInLine = 0;
 			}
 //			System.out.println(wordCount);
+
 		}
 		System.out.println(wordCount);
 	}
+
+	public void justifyText(List wordCount) {
+
+    }
 
 }
