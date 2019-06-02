@@ -22,6 +22,48 @@ public class BinaryTreeLinkedList {
         System.out.println("Root node " + data + " created");
     }
 
+    public void printPreOrder(Node node) {
+        if(node == null)
+            return;
+
+        System.out.print(node.data + " ");
+        printPreOrder(node.left);
+        printPreOrder(node.right);
+    }
+
+    public void printInOrder(Node node) {
+        if ( node == null)
+            return;
+
+        printInOrder(node.left);
+        System.out.print(node.data + " ");
+        printInOrder(node.right);
+    }
+
+    public void printPostOrder(Node node) {
+        if(node == null)
+            return;
+
+        printPostOrder(node.left);
+        printPostOrder(node.right);
+        System.out.print(node.data + " ");
+    }
+
+    void printPreOrder() {
+        printPreOrder(root);
+        System.out.println();
+    }
+
+    void printInOrder() {
+        printInOrder(root);
+        System.out.println();
+    }
+
+    void printPostOrder() {
+        printPostOrder(root);
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         BinaryTreeLinkedList bt = new BinaryTreeLinkedList();
 
@@ -29,5 +71,9 @@ public class BinaryTreeLinkedList {
 
         bt.root.left = new Node("B");
         bt.root.right = new Node("C");
+
+        bt.printPreOrder();
+        bt.printInOrder();
+        bt.printPostOrder();
     }
 }
