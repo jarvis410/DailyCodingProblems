@@ -2,8 +2,8 @@ package easy;
 
 import java.util.Set;
 
-import com.google.common.collect.ImmutableSet;
-import com.google.common.collect.Sets;
+//import com.google.common.collect.ImmutableSet;
+//import com.google.common.collect.Sets;
 
 /**
  * generate power set
@@ -14,13 +14,13 @@ import com.google.common.collect.Sets;
 public class Problem37 {
 
 	public static void main(String[] args) {
-		Set<Integer> ints = ImmutableSet.of(1, 2, 3);
+		/*Set<Integer> ints = ImmutableSet.of(1, 2, 3);
 		
 		Set<Set<Integer>> result = Sets.powerSet(ints);
 		
 		for (Set<Integer> set : result) {
 			System.out.println(set);
-		}
+		}*/
 	}
 
 }
